@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Negative Button and Listener
         Button buttonNeg = (Button) findViewById(R.id.buttonNeg);
-
         buttonNeg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,6 +116,18 @@ public class MainActivity extends AppCompatActivity {
                         newNumber.setText("");
                     }
                 }
+            }
+        });
+
+        // Clear Button and Listener
+        Button buttonClear = (Button) findViewById(R.id.buttonClear);
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                result.setText("");
+                newNumber.setText("");
+                displayOperation.setText("");
+                operand1 = null;
             }
         });
 
